@@ -1,0 +1,1896 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: '微软雅黑', '黑体', Verdana, sans-serif, '宋体', serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9f9;
+    /*background: url("images/white_bg.jpg") left repeat;*/
+}
+
+body.form-body {
+    background-color: white!important;
+    padding-top: 10px;
+}
+
+/************************* 首页页面框架 *****************/
+div.header {
+    width: 100%;
+    height: 70px;
+    background-color: #2F4056;
+}
+
+div.logo {
+    width: 217px;
+    height: 70px;
+    background: url("images/logo_120px.png") no-repeat center;
+    background-size: cover;
+    behavior: url(css/backgroundsize.min.htc);
+    /*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo_120px.png',sizingMethod='scale');*/
+    /*-ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo_120px.png',sizingMethod='scale')";*/
+}
+div.title {
+    position: absolute;
+    left: 270px;
+    top: 0;
+    width: auto;
+    height: 70px;
+    line-height: 70px;
+    color: white;
+    font-size: 25px;
+    font-family: '微软雅黑', '黑体', Verdana, sans-serif, '宋体', serif;
+}
+
+div.user-info {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 70px;
+    line-height: 70px;
+}
+
+div.user-info ul {
+    display: inline;
+    list-style: none;
+}
+
+div.user-info li {
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    margin-left: 10px;
+}
+
+div.user-info li i.iconfont {
+    color: white;
+    font-size: 30px;
+}
+
+div.user-info li span {
+    font-size: 16px;
+    color: white;
+}
+
+.layui-badge {
+    font-size: 13px!important;
+}
+
+div.user-info li select {
+    width: 100px;
+    height: 25px;
+    font-size: 15px;
+    border: none;
+}
+
+.layui-side.layui-bg-black {
+    background-color: white!important;
+}
+
+#left-menu {
+    z-index: 0 !important;
+    position: inherit;
+    top: 0;
+    width: 220px;
+    border: none !important;
+    border-radius: 0;
+}
+
+.mini-splitter-pane .mini-splitter-pane1, .mini-layout-region {
+    border: none !important;
+}
+
+#logoff {
+    color: white;
+}
+
+.layui-nav-child a {
+    padding-left: 40px !important;
+}
+
+.mini-layout-split.mini-layout-split-north.mini-layout-split-nodrag {
+    background-color: #2F4056;
+}
+
+div.div-left-button {
+    width: 220px;
+    height: 30px;
+}
+
+/********************* 管理员菜单 ******************/
+
+ul.czsg-menu-admin-left {
+    float: left;
+    width: 60px;
+    height: 100%;
+    background-color: #393D49;
+}
+
+ul.czsg-menu-admin-right {
+    margin-left: 60px;
+    width: 140px;
+    height: 100%;
+}
+
+
+.czsg-menu-admin-level1 {
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.czsg-menu-admin-level1.current {
+    background-color: #50a078;
+}
+
+
+.czsg-menu-admin-level2 {
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    color: black;
+    opacity: 0.7;
+    cursor: pointer;
+    border-bottom: #DDDDDD solid 1px;
+}
+
+.czsg-menu-admin-level2.current {
+    color: #287160;
+    opacity: 1;
+}
+
+.czsg-menu-toggle {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    z-index: 1000;
+}
+
+.czsg-menu-toggle .czsg-menu-toggle-btn {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 20px;
+    background: #393D49 url("images/close.png") no-repeat center;
+}
+
+.czsg-menu-toggle .czsg-menu-toggle-btn.hide {
+    background: #393D49 url("images/expand.png") no-repeat center;
+}
+
+#leftNav.hide {
+    display: none;
+}
+
+#layuiBody.expand {
+    left: 0px;
+}
+
+/******************** 普通用户/单位用户菜单 **************/
+
+ul.jsczsg-menu-normal {
+    width: 100%;
+    list-style: none;
+}
+
+.jsczsg-menu-normal-level1 {
+    width: 200px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    opacity: 0.8;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.jsczsg-menu-normal-level1 span {
+    display: block;
+    padding-left: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #eaedf1;
+}
+
+ul.jsczsg-menu-normal-level1 ul {
+    width: 100%;
+    list-style: none;
+}
+
+.jsczsg-menu-normal-level2 {
+    padding-left: 50px;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: black;
+    opacity: 0.8;
+    font-weight: normal;
+    border-top: 1px solid #DDDDDD;
+    cursor: pointer;
+}
+
+.jsczsg-menu-normal-level2.current {
+    background-color: #50a078;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+}
+
+/***************  layui admin-layui模板 ******************/
+
+.layui-layout-admin .layui-body,
+.layui-layout-admin .layui-side {
+    bottom: 0 !important;
+    top: 70px !important;
+}
+
+.layui-layout-admin .layui-side {
+    top: 70px!important;
+    padding-top: 20px!important;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.08);
+}
+
+.layui-layout-admin .layui-side-hide {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 0;
+    overflow-x: hidden
+}
+
+.layui-layout-admin .layui-body-hide {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 998;
+    width: auto;
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box
+}
+
+.layui-header {
+    height: 70px !important;
+}
+
+div.logo {
+    /*background-color: #287160 !important;*/
+}
+
+#left-menu {
+    width: 200px !important;
+}
+
+.layui-layout-admin .layui-header {
+    /*background: url("images/header-pic.png") 40% top  #037977 no-repeat;*/
+    background-image: linear-gradient(140deg, #287160 0%, #009688 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#287160,endcolorstr=#009688,gradientType=1);
+}
+
+.layui-badge {
+    cursor: pointer;
+}
+
+.layui-layout.layui-layout-admin {
+    width: 100%;
+    height: 100%;
+}
+
+.layui-body {
+    min-width: 1000px;
+}
+
+.jsczsg-main-content {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#logOff {
+    cursor: pointer;
+}
+
+.my-index-pop-window {
+    position: absolute;
+    top: 70px;
+    right: 180px;
+    width: 170px;
+
+    background-color: #40485b;
+    z-index: 999;
+}
+
+.my-index-pop-window.hide {
+    display: none;
+}
+
+.my-index-pop-window ul {
+    width: 100%;
+    list-style: none;
+}
+
+.my-index-pop-window ul li {
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    color: whitesmoke;
+    font-size: 16px;
+    border-bottom: 1px solid #393d49;
+}
+
+.my-index-pop-window ul li span.my-setting-item {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.my-index-pop-window ul li i.iconfont {
+    display: inline-block;
+    float: left;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px!important;
+}
+
+/************** 列表 miniui tablegrid  *******************/
+
+
+div.my-mini-grid-main-div {
+    margin: 0 30px;
+    height: 100%;
+}
+
+div.my-grid-normal-toolbar {
+    margin-top: 20px;
+    height: 36px;
+}
+
+ul.my-grid-normal-toolbar-btn {
+    list-style: none;
+    display: inline;
+}
+
+ul.my-grid-normal-toolbar-btn li {
+    float: left;
+    margin-right: 10px;
+}
+
+div.my-grid-title-div {
+    margin-top: 5px;
+    width: 100%;
+    height: 40.5px;
+    line-height: 40px;
+    background-color: white;
+    border-bottom: .5px solid #dddddd;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.08)
+}
+
+div.my-grid-info-div {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    border-bottom: .5px solid #dddddd;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.08)
+}
+
+div.my-grid-info-div .my-grid-info-text {
+    margin-left: 20px;
+    font-size: 13px;
+    color: #1e395b;
+}
+
+.my-grid-info-text span.my-grid-info-value {
+    padding: 0 20px 0 5px;
+    font-size: 20px;
+    color: #0b93d9;
+    font-weight: bolder;
+}
+
+span.my-grid-info-value.my-grid-info-value-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+span.my-grid-info-value.my-grid-info-value-link:hover {
+    color: #ef5350;
+}
+
+div.my-grid-title-content {
+    display: inline-block;
+    float: left;
+    height: 40px;
+}
+
+.my-grid-title-btn {
+    display: inline-block;
+    float: right;
+    margin-left: 20px;
+    margin-right: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.my-grid-title-icon {
+    display: inline-block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #4b556a;
+    font-size: 24px!important;
+}
+
+.my-grid-title-text {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px!important;
+    font-weight: bold;
+    color: #4b556a;
+}
+
+.my-page-top-blank {
+    height: 10px;
+}
+
+.my-page-bottom-blank {
+    height: 10px;
+}
+
+.mini-grid-cell-inner, .mini-grid-headerCell-inner {
+    line-height: 25px!important;
+}
+
+.mini-grid-headerCell-inner {
+    font-weight: bold!important;
+}
+
+.mini-toolbar {
+    line-height: 30px!important;
+}
+
+.mini-grid-row-selected {
+    background-color: #F8F8F8 !important;
+}
+
+/*.mini-grid-rows-view {*/
+    /*overflow-x: hidden!important;*/
+/*}*/
+
+.mini-datagrid-no-v-lines .mini-grid-headerCell,
+.mini-datagrid-no-v-lines .mini-grid-bottomCell,
+.mini-datagrid-no-v-lines .mini-grid-cell {
+    border-right: none!important;
+}
+
+.grid-row-text .mini-grid-cell-inner {
+    font-size: 13px!important;
+}
+
+
+/********** 按钮 ***********/
+
+.my-btn {
+    border: none;
+    margin-right: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    background-color: #009688;
+    color: whitesmoke;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.my-btn:hover {
+    opacity: 0.9;
+}
+
+.my-btn.my-btn-small {
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+}
+
+.my-btn.my-btn-second-level {
+    background-color: white;
+    color: #009688;
+    border: 1px solid #009688;
+}
+
+.my-btn.my-btn-warn {
+    background-color: #ff6347;
+}
+
+.my-btn.my-btn-light-warn {
+    background-color: #FF8A80;
+}
+
+
+.my-btn.my-btn-normal {
+    background-color: #1e90ff;
+}
+
+.my-btn.my-btn-disabled {
+    color: #DDDDDD;
+    background-color: whitesmoke;
+    border: 1px solid #DDDDDD;
+    cursor: default;
+}
+
+.my-btn.my-btn-link {
+    background: none;
+    font-weight: bold;
+    color: #2D93CA;
+    text-decoration: underline;
+}
+
+.my-btn.my-btn-icon {
+    background: none;
+    color: #78909c;
+    font-weight: bold;
+    border: none;
+}
+
+.my-btn.my-btn-icon i.iconfont {
+    font-size: 20px!important;
+}
+
+
+.my-btn.hidden {
+    visibility: hidden;
+}
+
+.my-btn-icon.user-info-tip-icon {
+    float: right;
+}
+
+/*.grid-row-btn {*/
+    /*text-decoration: none;*/
+    /*color: white;*/
+    /*background-color: #ef5350;*/
+    /*padding: 2px 6px;*/
+    /*margin-top: 4px;*/
+    /*border-radius: 4px;*/
+/*}*/
+
+/********** 列表筛选框 ****************/
+.my-grid-normal-fiter-div {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.08)
+}
+
+.my-grid-normal-fiter-div.hide {
+    height: 35px!important;
+}
+
+.my-grid-normal-filter-title {
+    width: 100%;
+    height: 35px;
+    background-color: #ffffff;
+    border-bottom: 0.5px solid #DDDDDD;
+}
+
+.my-grid-normal-filter-title .title-text {
+    display: inline;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.my-grid-normal-filter-title .title-btn {
+    float: right;
+    width: auto;
+    height: 35px;
+    line-height: 35px;
+    padding-top: 1px;
+}
+
+.my-grid-normal-filter-title .title-btn .my-btn.arrow {
+    border: none;
+    background-color: white;
+    color: #666666;
+}
+
+.my-grid-normal-filter-title .iconfont.title-text-icon {
+    display: inline-block;
+    float: left;
+    width: 40px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 24px;
+    text-align: center;
+    color: #666666!important;
+}
+
+.my-grid-normal-filter-title .title-text-content {
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    color: #666666;
+}
+
+.my-grid-normal-filter-toolbar {
+    width: 100%;
+    display: inline-block;
+    list-style: none;
+    background-color: white;
+    /*border-left: .5px solid #DDDDDD;*/
+    /*border-right: .5px solid #DDDDDD;*/
+    /*border-bottom: .5px solid #DDDDDD;*/
+}
+
+.my-grid-normal-filter-toolbar li {
+    min-height: 35px;
+    float: left;
+}
+
+.my-grid-normal-filter-label {
+    display: inline;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 15px;
+    margin-right: 5px;
+    font-size: 13px;
+    color: black;
+    opacity: 0.9;
+}
+
+.my-grid-normal-filter-toolbar .mini-textbox,
+.my-grid-normal-filter-toolbar .mini-combobox {
+    display: inline!important;
+}
+
+.my-grid-normal-filter-toolbar .mini-buttonedit,
+.my-grid-normal-filter-toolbar .mini-textbox {
+    float: left!important;
+    height: 35px!important;
+    line-height: 35px!important;
+}
+
+.my-grid-normal-filter-toolbar .mini-buttonedit-border,
+.my-grid-normal-filter-toolbar .mini-textbox-border {
+    margin-top: 6px;
+}
+
+.my-grid-filter-text {
+    display: inherit;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    color: #555555;
+    font-size: 15px;
+}
+
+.my-grid-filter-text div {
+    float: left;
+}
+
+.my-grid-filter-text span {
+    margin-right: 5px;
+    padding: 2px 4px;
+    color: #ff5722;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #DDDDDD;
+}
+
+/********************* 个人注册页面 ************************/
+input#password {
+    width: 170px!important;
+}
+
+.my-form-info-tip {
+    width: 100%;
+    display: none;
+}
+
+.my-form-info-tip blockquote {
+    margin: 10px 20px!important;
+    /*width: 610px;*/
+    color: #ee6b4d;
+    word-break: break-all;
+}
+
+body.div-new {
+    width: 60%;
+    margin: 0 auto;
+    min-width: 700px;
+}
+
+
+body.div-old {
+    width: 70%;
+    min-width: 760px;
+}
+
+#LAY_demo_upload {
+    height: 137px;
+    width: 93px;
+}
+
+#userinfo-form table td {
+    padding: 4px 8px;
+    background-color: white;
+}
+
+.hidden-element {
+    visibility: hidden;
+}
+
+form.module-form table {
+    border: 1px solid #e2e7ec!important;
+    /*border-right: none!important;*/
+    border-bottom: none;
+}
+
+form.module-form td {
+    /*margin-top: 5px;*/
+    /*margin-bottom: 5px;*/
+    height: 45px;
+    width: 240px;
+    padding: 5px 10px;
+    border-bottom: solid 1px #e2e7ec;
+    /*border-right: solid 1px #e2e7ec;*/
+}
+
+form.module-form td.td-tip {
+    /*border-right: solid 1px #e2e7ec;*/
+    font-size: 14px;
+    color: grey;
+}
+
+form.module-form th {
+    font-weight: normal;
+    font-size: 15px;
+    background-color: #eff4f8;
+    width: 80px;
+    border-bottom: solid 1px #E2E7EC;
+    border-right: solid 1px #E2E7EC;
+}
+
+
+form.module-form {
+    margin: 10px 20px;
+}
+
+.layui-form-label {
+    text-align: right!important;
+}
+
+input#password {
+    width: 200px;
+    display: inline;
+}
+
+button#hidden-pwd {
+    line-height: 38px;
+    float: right;
+    display: inline;
+    border: none;
+}
+
+div.tips {
+    display: none;
+}
+
+div.tips blockquote {
+    margin: 10px 20px;
+    width: 610px;
+    color: #ee6b4d;
+    word-break: break-all;
+}
+
+span.symbol-required {
+    color: #ee6b4d;
+}
+
+.layui-form-label {
+    width: 100px!important;
+    color: #000000;
+}
+
+span#audit-status {
+    font-weight: bold;
+}
+
+
+fieldset.audit-btns {
+    margin: 10px 20px;
+    width: 645px;
+    border-color: #ee6b4d;
+    border-left: none!important;
+    border-right: none!important;
+    border-bottom: none!important;
+    display: none;
+}
+
+fieldset.audit-btns legend {
+    font-size: 15px;
+    color: #ee6b4d;
+    font-weight: bold;
+}
+
+.audit-form {
+    margin: 10px 0!important;
+    border-right: 1px solid #e2e7ec;
+}
+
+fieldset.audit-btns .audit-result {
+    width: 150px!important;
+    margin: 5px 0;
+}
+
+.audit-cause {
+    height: 50px!important;
+}
+
+div.module-title-div {
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+}
+
+.module-title {
+    margin: 0 20px;
+    height: 40px;
+    border-bottom: solid #cccccc 2px;
+}
+
+.module-title-text {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    color: #329ea8;
+}
+
+.audit-tip {
+    font-size: 16px;
+    color: grey;
+}
+
+.audit-checkbox {
+    width: 120px!important;
+    text-align: center;
+    border-right: 1px solid #e2e7ec;
+}
+
+.audit-checkbox .layui-form-checked {
+    border-color: #ee6b4d!important;
+}
+
+.audit-checkbox .layui-form-checked .layui-icon {
+    color: #ee6b4d!important;
+}
+
+.my-form-btn-static-div-placeholder {
+    width: 100%;
+    height: 60px!important;
+}
+
+.my-form-btn-static-div-placeholder.user {
+    height: 160px!important;
+}
+
+.my-form-btn-static-div {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: whitesmoke;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.08)
+}
+
+body.div-old .my-form-btn-static-div {
+    /*text-align: left;*/
+    /*margin-left: 20px;*/
+}
+
+.my-form-div {
+    width: 100%;
+    height: 100%;
+}
+
+.my-paper-preview-iframe {
+    width: 100%;
+    height: 720px;
+}
+
+.my-paper-preview-top-btns {
+    position: fixed;
+    z-index: 999;
+    top: 4px;
+    right: 4px;
+    width: 400px;
+    height: 40px;
+}
+
+.my-paper-preview-top-btns button {
+    float: right;
+}
+
+
+/************* 密码修改页 ******************/
+.my-simple-form-div {
+    width: 340px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+}
+
+.my-simple-form-title {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+.my-simple-form {
+    margin-bottom: 10px;
+}
+
+.my-simple-form-title i.iconfont {
+    font-size: 22px!important;
+}
+
+.my-simple-form-label {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+/************** 题目编辑页 *************/
+
+
+form.module-form {
+    margin: 10px 20px;
+}
+
+form.module-form table {
+    border: 1px solid #e2e7ec;
+    border-bottom: none;
+    /*box-shadow:0px 2px 10px rgba(0,0,0,0.08)*/
+}
+
+#question-content {
+    width: 100%;
+}
+
+form.module-form td {
+    /*margin-top: 5px;*/
+    /*margin-bottom: 5px;*/
+    height: 45px;
+    width: 210px;
+    padding: 5px 10px;
+    border-bottom: solid 1px #e2e7ec;
+    background-color: white;
+}
+
+form.module-form th {
+    font-weight: normal;
+    font-size: 15px;
+    background-color: #ffffff;
+    width: 80px;
+    border-bottom: solid 1px #E2E7EC;
+    border-right: none;
+}
+
+form.module-import-form td {
+    /*margin-top: 5px;*/
+    /*margin-bottom: 5px;*/
+    /*height: 45px;*/
+    width: 240px;
+    padding: 5px 10px;
+    border-bottom: solid 1px #e2e7ec;
+}
+
+form.module-import-form th {
+    font-weight: normal;
+    font-size: 15px;
+    background-color: #eff4f8;
+    width: 80px;
+    border-bottom: solid 1px #ccc
+}
+
+#question-analysis, #correct-answer {
+    width: 100%;
+}
+
+table#option-table {
+    border: none;
+}
+
+table#option-table td {
+    padding: 0 4px;
+    width: 340px!important;
+}
+
+table#option-table tr, table#option-table th, table#option-table td {
+    border-bottom: none;
+    background-color: white;
+}
+
+table#option-table th {
+    text-align: center;
+}
+
+table#option-table td.option-upload,
+table#option-table td.option-link {
+    width: 90px!important;
+}
+
+table#option-table tr input {
+    margin-right: 4px;
+}
+
+button#save-question.layui-btn {
+    margin-left: 20px;
+}
+
+.btn-delete-option {
+    border: none!important;
+}
+
+.btn-delete-option i {
+    font-size: 18px;
+}
+
+.option-input {
+    height: 32px;
+    border: 1px solid #e2e7ec;
+}
+
+#question-score {
+    width: 150px;
+}
+
+.ke-toolbar, .ke-statusbar {
+    background-color: #eff4f8!important;
+    border-color: #e2e7ec!important;
+}
+
+.ke-container {
+    border: 1px solid #e2e7ec!important;
+}
+
+.option-btn-div {
+    margin-left: 95px;
+}
+
+.my-module-form-table {
+    table-layout: fixed;
+}
+
+.my-module-form-table th {
+    width: 90px!important;
+}
+
+.my-module-form-table .mini-combobox
+{
+    width: 200px!important;
+}
+
+#question-source {
+    width: 200px!important;
+}
+
+#option-table,
+#option-table th {
+    border: none!important;
+    box-shadow: none!important;
+}
+
+.module-main-div {
+    background-color: white;
+}
+
+/************************ 题目预览样式 **************************/
+.question-view-info, .question-view-item {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #F9F9F9;
+}
+
+.question-view-info {
+    margin-bottom: 5px;
+}
+
+.question-view-info table {
+    table-layout: fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+.question-view-info td {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #dddddd;
+}
+
+.question-view-info-key {
+    color: #393D49;
+    font-weight: bold;
+    width: 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.question-view-info-value {
+    min-width: 40px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+
+.question-view-item {
+    box-shadow:
+        0px -2px 2px 0px #F8F8F8,
+        -2px 0px 2px 0px #F8F8F8,
+        2px 0px 3px 0px #F8F8F8,
+        0px 2px 2px 0px #F8F8F8;
+    border: 1px solid #dddddd;
+}
+
+.question-view-div {
+    margin-bottom: 20px;
+    padding:  6px 10px;
+    background-color: white;
+}
+
+.question-view-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+span.question-view-id {
+    display: block;
+    height: 0;
+}
+
+td.question-view-item-no {
+    width: 30px;
+    text-align: left;
+    vertical-align: top;
+}
+
+td.question-view-item-no, td.question-view-item-content {
+    line-height: 25px;
+    font-size: 14px;
+}
+
+ul.question-view-option-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul.question-view-option-list li {
+    line-height: 25px;
+    font-size: 14px;
+}
+
+ul.question-view-option-list li.img-option {
+    display: inline;
+    float: left;
+    width: 50%;
+}
+
+ul.question-view-option-list li img.question-img {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+ul.question-view-option-list li input[type=radio],
+ul.question-view-option-list li input[type=checkbox] {
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+span.question-views-option-no {
+    display: inline;
+}
+
+.question-view-item-content,
+ul.question-view-option-list li span {
+    font-family: "Times New Roman", "宋体", serif!important;
+}
+
+/* 题目对比预览视图 */
+.question-preview-div {
+    display: inherit!important;
+    width: 100%;
+    height: 50%;
+}
+
+.question-preview-title {
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.question-preview-div iframe {
+    display: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.question-view-btns td  {
+    margin-top: 20px;
+    background-color: whitesmoke;
+}
+
+/************* 菜单编辑表单 **************/
+.menu-form-div {
+    width: 600px;
+}
+
+.my-simple-form table {
+    table-layout: fixed;
+}
+
+.my-simple-form th {
+    width: 80px;
+}
+
+.my-simple-form td {
+    width: 400px;
+}
+
+/*********** Listbox左右选择: 如角色分配 ************/
+.listbox-move-item .mini-listbox-items td {
+    height: 30px!important;
+    font-size: 13px;
+}
+
+.listbox-move-item .mini-listbox-items .mini-listbox-checkbox input {
+    width: 16px;
+    height: 16px;
+    margin: 4px 4px!important;
+}
+
+.mini-listbox-item-selected td {
+    background-color: whitesmoke!important;
+}
+
+/******************* 组卷页面 ********************/
+.paper-setting-title {
+    padding-left: 10px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+
+/****************** 简单表单样式******************/
+/**
+  如专业证书编辑页面
+ */
+
+.simple-form-body {
+    background-color: white;
+}
+
+.simple-form-div {
+    padding: 10px;
+}
+
+.simple-form-title {
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-left: 4px solid #0b8d6d;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.simple-form {
+    padding-left: 5px;
+    padding-right: 5px;
+    /*background-color: #FBFBFB;*/
+    border-radius: 3px;
+}
+
+.simple-form-table {
+    table-layout: fixed;
+    background-color: #FBFBFB;
+    display: table;
+    width: 100%;
+}
+
+.simple-form-table .simple-file-upload-title {
+    border-right: 1px solid #dfdfdf;
+    border-radius: 4px;
+    width: 90%;
+}
+
+.simple-form-table .layui-upload-file {
+    display: none;
+}
+
+.simple-form-table th {
+    text-align: center;
+    width: 90px!important;
+    font-weight: normal;
+    color: #23262E;
+}
+
+.simple-form-table th,
+.simple-form-table td {
+    height: 50px;
+}
+
+
+/*.simple-form-table .mini-textbox-input,*/
+/*.simple-form-table .mini-buttonedit-input*/
+/*{*/
+    /*line-height: 28px!important;*/
+    /*height: 28px!important;*/
+/*}*/
+
+.simple-form-table .mini-buttonedit-buttons {
+    height: 28px!important;
+    padding-top: 4px!important;
+}
+
+.simple-form-table .mini-textbox-border,
+.simple-form-table .mini-buttonedit-border {
+    /*height: 28px !important;*/
+    border-radius: 4px!important;
+}
+
+/*.simple-form-table .mini-textbox,*/
+/*.simple-form-table .mini-buttonedit.mini-combobox.mini-popupedit,*/
+/*.simple-form-table .mini-buttonedit.mini-spinner,*/
+/*.simple-form-table .mini-buttonedit.mini-datepicker.mini-popupedit*/
+/*{*/
+    /*height: 30px!important;*/
+/*}*/
+
+.simple-form-hidden-tr th,
+.simple-form-hidden-tr td
+{
+    height: 1px!important;
+}
+
+
+span.text-state {
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: white;
+}
+
+span.text-state-yes {
+    background-color: #43a047;
+}
+
+span.text-state-no {
+    background-color: #0e6a99;
+}
+
+span.text-state-disable {
+    background-color: #8497b1;
+}
+
+span.text-state-end {
+    background-color: #26A69A;
+}
+
+span.text-state-warn {
+    background-color: #ff5722;
+}
+
+/*页面中2个表格时,使用2个DIV进行等分*/
+div.page-main{
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+/******** 典型页面 - 批量报名(横向双复选表格) ******/
+.double-checkbox-grid-body {
+    overflow: hidden;
+}
+
+.double-checkbox-grid-ul {
+    width: 980px;
+    height: 100%;
+    display: inline-block;
+    list-style: none;
+}
+
+.double-checkbox-grid-ul li {
+
+}
+
+
+.double-checkbox-grid, .center-btns {
+    display: inline;
+    float: left;
+    height: 100%;
+}
+
+.double-checkbox-grid {
+    width: 450px;
+}
+
+.double-checkbox-grid .mini-grid-cell-inner {
+    line-height: 18px!important;
+    font-size: 13px!important;
+}
+
+.double-checkbox-grid .mini-fit {
+    box-shadow: none!important;
+}
+
+.center-btns {
+    width: 80px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.center-btns button {
+    margin-top: 20px;
+}
+
+.center-btns button.center-btn-top {
+    margin-top: 240px;
+}
+
+.grid-title {
+    height: 32px;
+    line-height: 32px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.grid-filter {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    background-color: #eaedf1;
+    border: 1px solid #DDDDDD;
+}
+
+.grid-filter span.mini-buttonedit {
+    margin-top: -3px;
+}
+
+.datagrid-row-28px .mini-grid-cell-inner,
+.datagrid-row-28px .mini-grid-headerCell-inner
+{
+    line-height: 16px!important;
+}
+
+input.exam-score-line{
+    width: 50px;
+    border: 1px solid #8497b1;
+}
+
+span.exam-score-line-title{
+    color: #0e6a99;
+}
+span.exam-score-line-tip-hg{
+    color: black;
+}
+span.exam-score-line-tip{
+    color: red;
+}
+
+/*****************************************
+ ************** 试卷页面 ******************
+ *****************************************/
+.paper-page {
+    background-color: white;
+}
+
+.paper-base-info {
+    height: 50px;
+    padding-top: 40px;
+}
+
+.paper-base-info .paper-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.paper-user-info {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.paper-user-info ul {
+    display: inline-block;
+    list-style: none;
+}
+
+.paper-user-info ul li {
+    display: inline;
+    float: left;
+    height: 20px;
+}
+
+.paper-user-info ul li.paper-user-info-label {
+    padding-left: 10px;
+}
+
+.paper-user-info ul li.paper-user-info-text {
+    width: 130px;
+    border-bottom: 1px solid #000000;
+}
+
+.paper-user-info ul li.paper-user-info-text.paper-user-info-text-short {
+    width: 60px!important;
+}
+
+.paper-question-list {
+    background-color: white;
+}
+
+.paper-item-type-name {
+    padding-left: 20px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+.paper-page .question-view-item {
+    box-shadow: none!important;
+    border: none!important;
+}
+
+
+/**********************************************/
+.mini-messagebox-buttons .mini-button {
+    color: #0C0C0C!important;
+}
+
+.audit-cell {
+    background: url("images/x.png") 95% no-repeat;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.red-text {
+    padding: 0 4px;
+    color: #ff5722;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+/************ 组卷 ****************
+ */
+
+/** 数量统计面板 **/
+
+div.my-panel-num-title {
+    height: 30px;
+    margin-left: 20px;
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+ul.my-panel-num-ul {
+    list-style: none;
+}
+
+ul.my-panel-num-ul li {
+    display: inline;
+    float: left;
+    padding: 0 20px;
+}
+
+.my-panel-num-ul-item {
+    padding-top: 10px;
+    width: 140px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+}
+
+.my-panel-num-item-key {
+    font-size: 14px;
+    display: block;
+    margin-left: 10px;
+}
+
+.my-panel-num-item-value {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px auto;
+    text-align: center;
+}
+
+
+/**************** 组卷规则信息总览 ****************/
+.rule-info-body {
+    background-color: white;
+}
+
+.rule-info-page {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.rule-info-title-div {
+    margin-left: 20px;
+}
+
+.rule-info-content {
+    padding-left: 20px;
+    background-color: white;
+}
+
+.rule-info-title-text {
+    height: 30px;
+    line-height: 30px;
+}
+
+.rule-info-title-profession {
+    display: block;
+    padding: 4px;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #8497b1;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.info-key, .info-value {
+    padding: 3px 0;
+}
+
+.rule-info-itemType-list {
+    list-style: none;
+}
+
+.rule-info-itemType-title {
+    display: block;
+    margin: 30px 40% 10px 0;
+    padding: 8px 8px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: whitesmoke;
+    border-left: 5px solid #50a078;
+}
+
+.rule-info-itemType-item {
+    display: block;
+}
+
+.rule-info-itemType-item ul {
+    list-style: none;
+    height: 40px;
+}
+
+.rule-info-itemType-item ul li {
+    display: inline;
+    float: left;
+    padding: 4px;
+    font-size: 14px;
+    border: 1px solid #DFDFDF;
+}
+
+.info-key {
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
+.info-value {
+    width: 80px;
+    text-align: center;
+}
+
+.rule-info-question-type-list {
+    table-layout: fixed;
+    width: 60%;
+    border: 1px solid #dfdfdf;
+    border-right: none!important;
+    border-radius: 2px;
+}
+
+.rule-info-question-type-list tr {
+    width: 100%;
+}
+
+.rule-info-question-type-list th {
+    height: 30px;
+    font-size: 14px;
+    border-right: 1px solid #dfdfdf;
+}
+
+.rule-info-question-type-list td {
+    border-top: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    height: 28px;
+    font-size: 13px;
+}
+
+.rule-info-question-type-list {
+    text-align: center;
+}
+
+/******************** 系统门户页面(公告) ************/
+.system-notice-page-mainbox {
+    height: 100%;
+    background: white;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.system-notice-top-blank {
+    width: 100%;
+    height: 20px;
+}
+
+.system-notice-header {
+    width: 100%;
+    height: 60px;
+    background: url("images/2.png") center repeat;
+}
+
+.system-notice-header-title {
+    height: 60px;
+    margin-top: 10px;
+    padding: 5px 40px;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
+
+.system-notice-header-title i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+}
+
+
+.company-icon {
+    font-size: 12px;
+    padding: 3px;
+    color: white;
+    background-color: #ff6347;
+    border-radius: 4px;
+}
+
+/************* 简单文件上传弹窗 **************/
+.simple-file-upload-form {
+    width: 100%;
+    height: 100%;
+}
+
+.simple-file-upload-btns {
+    padding-top: 40px;
+    padding-left: 25px;
+    height: 40px;
+}
+
+.sinple-file-upload-info {
+    padding: 20px;
+}
+
+.sinple-file-upload-info p {
+    font-size: 13px;
+    text-indent: 2em;
+}
+
+.simple-file-upload-btn {
+    float: left;
+}
+
+.simple-file-upload-title {
+    float: left;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    width: 280px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #dfdfdf;
+    border-right: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.simple-file-upload-title span.upload-tip {
+    color: #78909c;
+}
+
+.window-notice {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.window-notice .highlight-content {
+    margin-top: 15px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6347;
+    width: 100%;
+    text-align: center
+}
+
+.layui-layer-title {
+    background-color: #0d8b7c!important;
+    color: white!important;
+}
+
+/*.layui-disabled, .layui-disabled:hover {*/
+    /*color: #0C0C0C!important;*/
+/*}*/
+
+.toolbar-tip {
+    color: #ff6347;
+    font-weight: bold;
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>驾考问题管理界面</title>
+    <script src="../js/layui/dist/layui.all.js"></script>
+    <link rel="stylesheet" href="../js/layui/dist/css/layui.css">
+    <style>
+        table{border-collapse:inherit}
+    </style>
+</head>
+<body>
+<div class="my-mini-grid-main-div">
+    <div class="my-page-top-blank">
+    </div>
+    <div class="my-grid-title-div">
+        <div class="my-grid-title-btn">
+            <span class="title" style="font-weight: bold;left: 32px;font-size: 14px;color: #131413;position: absolute">驾考问题管理界面</span>
+            <input id="key" class="mini-textbox" emptyText="请输入名称" style="width:150px;" onenter="onKeyEnter"/>
+            <button class="my-btn" onclick="search()">查询</button>
+            <button class="my-btn" onclick="insertUser();">新建</button>
+            <button class="my-btn" onclick="save();">保存</button>
+            <button class="my-btn" onclick="del();">删除</button>
+        </div>
+    </div>
+    <div class="my-page-top-blank">
+    </div>
+    <div class="mini-fit">
+        <div class="mini-datagrid" id="grid" allowCellTip="true" pageSize="50" editNextOnEnterKey="true"
+             editNextRowCell="true" allowCellWrap="true" allowCellEdit="true" allowRowSelect="true" allowCellSelect="true" multiSelect="true"
+             style="width: 100%;height:100%;min-width: 1039px!important;">
+            <div property="columns">
+                <div type="indexcolumn"></div>
+                <div type="checkcolumn"></div>
+                <div field="qId" name="qId" id="qId" align="center" headerAlign="center" width="70">题目ID
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="type" name="type" id="type" align="center" headerAlign="center" width="50">科目
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="title" name="title" id="title" align="center"  headerAlign="center" width="auto">题目
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="tikuType" name="tikuType" id="tikuType" align="center" headerAlign="center" width="80">题目类型
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="a" name="a" id="a" align="center" headerAlign="center" width="auto">A
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="b" name="b" id="b" align="center" headerAlign="center" width="auto">B
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="c" name="c" id="c" align="center" headerAlign="center" width="auto">C
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="d" name="d" id="d" align="center" headerAlign="center" width="auto">D
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="val" name="val" id="val" align="center" headerAlign="center" width="50">答案
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="explainText" name="explainText" id="explainText" align="center" headerAlign="center" width="auto">答案解析
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+                <div field="file" name="file" id="file" align="center" headerAlign="center" width="auto">图片地址
+                    <input class="mini-textarea" property="editor" style="width:100%;">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/boot.js"></script>
+<script src="js/index2.js"></script>
+<!--<script src="index2.js"></script>-->
+</body>
+</html>
