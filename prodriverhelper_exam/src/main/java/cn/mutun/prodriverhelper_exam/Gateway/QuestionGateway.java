@@ -120,4 +120,14 @@ public class QuestionGateway {
             return ResponseMsg.fail(-1,e.getMessage());
         }
     }
+
+    @PostMapping("/getStatistic")
+    public ResponseMsg getStatistic() {
+        try{
+            return ResponseMsg.success(qs.getStatistic());
+        }catch (Exception e) {
+            e.printStackTrace();
+            return ResponseMsg.fail(-1,e.getMessage());
+        }
+    }
 }

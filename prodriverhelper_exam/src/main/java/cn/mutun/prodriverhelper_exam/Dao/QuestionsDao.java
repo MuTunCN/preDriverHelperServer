@@ -2,6 +2,7 @@ package cn.mutun.prodriverhelper_exam.Dao;
 
 import cn.mutun.prodriverhelper_exam.Privoder.QuestionPrivoder;
 import cn.mutun.prodriverhelper_exam.Entity.Question;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectProvider;
 import tk.mybatis.mapper.common.Mapper;
 
@@ -27,4 +28,7 @@ public interface QuestionsDao extends Mapper<Question> {
 
     @SelectProvider(type = QuestionPrivoder.class, method = "addQuestion")
     void addQuestion(int uId,int qId);
+
+    @Select("select count(*) from predriverhelper.qid_2_uid")
+    int selectAnsweredQuestion();
 }

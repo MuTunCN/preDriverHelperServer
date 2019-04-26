@@ -67,4 +67,6 @@ public interface QuestionService  {
     int getAllCount();
 
     void updateQuestionInfo(String nikeName,int qId, int isWorry);
-}
+
+    List<Map<String,Integer>> getStatistic();
+ }

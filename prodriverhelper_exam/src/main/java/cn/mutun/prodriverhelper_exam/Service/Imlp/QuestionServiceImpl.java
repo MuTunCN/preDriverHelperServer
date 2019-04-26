@@ -108,4 +108,21 @@ public class QuestionServiceImpl implements QuestionService {
         }
 
     }
+
+    @Override
+    public List<Map<String, Integer>> getStatistic() {
+        int total = qDao.selectAll().size();
+        int count = qDao.selectAnsweredQuestion();
+        List<Map<String,Integer>> result = new ArrayList<>();
+        Map map = new HashMap();
+        map.put("name","答题量");
+        map.put("data",count);
+        result.add(map);
+        map = new HashMap();
+        map.put("name","总数");
+        map.put("data",total);
+        result.add(map);
+        return result;
+
+    }
 }
