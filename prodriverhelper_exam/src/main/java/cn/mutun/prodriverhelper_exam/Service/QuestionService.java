@@ -65,4 +65,6 @@ public interface QuestionService  {
     List<Question> get(String pageIndex, String pageSize, String key);
 
     int getAllCount();
+
+    void updateQuestionInfo(String nikeName,int qId, int isWorry);
 }

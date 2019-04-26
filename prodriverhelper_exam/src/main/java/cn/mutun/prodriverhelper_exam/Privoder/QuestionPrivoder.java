@@ -8,7 +8,7 @@ public class QuestionPrivoder {
         int index = Integer.parseInt(pageIndex);
         int size = Integer.parseInt(pageSize);
         int start = index*size;
-        String sql ="SELECT * FROM predriverhelper.questions where type = {type} limit {start},{size}";
+        String sql ="SELECT q.* FROM predriverhelper.questions q where q.id not in (select qid from predriverhelper.qid_2_uid where uid=2) and type = {type} limit {start},{size}";
         sql = sql.replace("{type}",type)
                 .replace("{start}",String.valueOf(start))
                 .replace("{size}",String.valueOf(size));
@@ -33,5 +33,13 @@ public class QuestionPrivoder {
         }
         sql.append(" limit "+start+","+size);
         return sql.toString();
+    }
+
+    public String addWorryQuestion(int uId, int qId) {
+        return "insert into predriverhelper.worry_id_2_uid(id,uid,qid,count) values (null,"+uId+","+qId+",1)";
+    }
+
+    public String addQuestion(int uId, int qId) {
+        return "insert into predriverhelper.qid_2_uid(id,uid,qid) values (null,"+uId+","+qId+")";
     }
 }

@@ -21,4 +21,10 @@ public interface QuestionsDao extends Mapper<Question> {
 
     @SelectProvider(type = QuestionPrivoder.class, method = "get")
     List<Question> get(String pageIndex, String pageSize ,String key);
+
+    @SelectProvider(type = QuestionPrivoder.class, method = "addWorryQuestion")
+    void addWorryQuestion(int uId,int qId);
+
+    @SelectProvider(type = QuestionPrivoder.class, method = "addQuestion")
+    void addQuestion(int uId,int qId);
 }

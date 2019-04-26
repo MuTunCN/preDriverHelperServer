@@ -12,7 +12,7 @@ platform.user.login = function (loginName, password) {
     platformUtil.net.ajaxData(platformUtil.util.url.getURL() + "/user/login", param, 'post', false, function (data) {
         console.log(data);
         if (data.status) {
-            window.location = platformUtil.util.url.getURL() + "/index.html";
+            window.location = platformUtil.util.url.getURL() + "/login.html";
         } else {
             alert("登录失败！" + data.data)
         }

@@ -1,12 +1,15 @@
 package cn.mutun.prodriverhelper_exam.Service.Imlp;
 
 import cn.mutun.prodriverhelper_exam.Dao.QuestionsDao;
+import cn.mutun.prodriverhelper_exam.Dao.UserDao;
 import cn.mutun.prodriverhelper_exam.Entity.Question;
+import cn.mutun.prodriverhelper_exam.Entity.UserInfoDO;
 import cn.mutun.prodriverhelper_exam.Service.QuestionService;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.internal.bind.JsonTreeReader;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
@@ -21,6 +24,9 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Resource
     QuestionsDao qDao;
+
+    @Resource
+    UserDao uDao;
 
     @Override
     public List<Question> getRandomQuestions(String pageIndex, String pageSize, String type) {
@@ -89,5 +95,17 @@ public class QuestionServiceImpl implements QuestionService {
     public void insert() {
         Question question = new Question();
         qDao.insert(question);
+    }
+
+    @Override
+    public void updateQuestionInfo(String nickName, int qId, int isWorry) {
+        Example example1 = new Example(UserInfoDO.class);
+        example1.createCriteria().andEqualTo("nikename",nickName);
+        UserInfoDO userInfoDO = uDao.selectOneByExample(example1);
+        qDao.addQuestion(userInfoDO.getId(),qId);
+        if (isWorry > 0) {
+            qDao.addWorryQuestion(userInfoDO.getId(),qId);
+        }
+
     }
 }

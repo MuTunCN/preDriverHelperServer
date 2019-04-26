@@ -105,4 +105,19 @@ public class QuestionGateway {
             return ResponseMsg.fail(-1,e.getMessage());
         }
     }
+
+    @PostMapping("/updateQuestionInfo")
+    public ResponseMsg updateQuestionInfo(@RequestParam Map<String,Object> params){
+        try{
+            System.out.println(params);
+            int qId = Integer.parseInt(params.get("qId").toString());
+            int isWorry = Integer.parseInt(params.get("isWorry").toString());
+            String nickName = params.get("nickName").toString();
+            qs.updateQuestionInfo(nickName,qId,isWorry);
+            return ResponseMsg.success(1);
+        }catch (Exception e) {
+            e.printStackTrace();
+            return ResponseMsg.fail(-1,e.getMessage());
+        }
+    }
 }

@@ -7,6 +7,8 @@ import cn.mutun.prodriverhelper_exam.Service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -40,5 +42,18 @@ public class UserGateway {
         }
     }
 
+    @PostMapping("adminLogin")
+    public String login(String name, String pwd, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+
+        if(name.equals("root")&&pwd.equals("1234")) {
+            UserInfo user = new UserInfo();
+            user.setNickName("root");
+            session.setAttribute("user",user);
+            return "登录成功";
+        } else {
+            return "用户名或密码错误!";
+        }
+    }
 
 }
