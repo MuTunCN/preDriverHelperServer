@@ -47,9 +47,7 @@ public class UrlFilter implements Filter {
     }
 
     /**
-     * @Author: xxxxx
      * @Description: 是否需要过滤
-     * @Date: 2018-03-12 13:20:54
      * @param uri
      */
     public boolean isNeedFilter(String uri) {

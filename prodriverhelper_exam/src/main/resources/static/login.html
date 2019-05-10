@@ -13,23 +13,23 @@
 <div id="particles-js">
     <div class="login">
         <div class="login-top">
-            登录
+            驾考系统后台登陆界面
         </div>
         <div class="login-center clearfix">
             <div class="login-center-img"><img src="show/img/name.png"/></div>
             <div class="login-center-input">
-                <input type="text" name="" value="" placeholder="请输入您的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'"/>
+                <input type="text" id="name" value="" placeholder="请输入您的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'"/>
                 <div class="login-center-input-text">用户名</div>
             </div>
         </div>
         <div class="login-center clearfix">
             <div class="login-center-img"><img src="show/img/password.png"/></div>
             <div class="login-center-input">
-                <input type="password" name=""value="" placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
+                <input type="password" id="password"value="" placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
                 <div class="login-center-input-text">密码</div>
             </div>
         </div>
-        <div class="login-button">
+        <div class="login-button" >
             登录
         </div>
     </div>
@@ -62,19 +62,27 @@
         }
     }
     document.querySelector(".login-button").onclick = function(){
-        addClass(document.querySelector(".login"), "active")
-        setTimeout(function(){
-            addClass(document.querySelector(".sk-rotating-plane"), "active")
-            document.querySelector(".login").style.display = "none"
-        },400)
-        setTimeout(function(){
-            removeClass(document.querySelector(".login"), "active")
-            removeClass(document.querySelector(".sk-rotating-plane"), "active")
-            document.querySelector(".login").style.display = "block"
-            window.location = "show/index.html"
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("password").value;
+        console.log(name,password);
+        if(name === "admin" && password === "123") {
 
-        },2000)
+            addClass(document.querySelector(".login"), "active")
+            setTimeout(function(){
+                addClass(document.querySelector(".sk-rotating-plane"), "active")
+                document.querySelector(".login").style.display = "none"
+            },400)
+            setTimeout(function(){
+                removeClass(document.querySelector(".login"), "active")
+                removeClass(document.querySelector(".sk-rotating-plane"), "active")
+                document.querySelector(".login").style.display = "block"
+            },2000)
+            window.location = "show/index.html"
+        }else{
+            alert("账号密码错误!")
+        }
     }
+
 </script>
 <div style="text-align:center;">
 </div>
