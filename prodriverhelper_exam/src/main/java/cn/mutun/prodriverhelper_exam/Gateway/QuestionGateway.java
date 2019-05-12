@@ -40,7 +40,12 @@ public class QuestionGateway {
             String pageSize = params.get("pageSize") == null ? "":params.get("pageSize").toString();
             String key = params.get("key") == null ? "" : params.get("key").toString();
             List<Question> data = qs.get(pageIndex,pageSize,key);
-            int total = qs.getAllCount();
+            int total ;
+            if(key.equals("")) {
+                total = qs.getAllCount();
+            } else {
+                total = data.size();
+            }
             return ResponseMsg.success(data,total);
         } catch (Exception e) {
             return ResponseMsg.fail(-1,e.getMessage());

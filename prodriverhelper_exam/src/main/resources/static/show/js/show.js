@@ -43,12 +43,10 @@ function del() {
 
 function insertUser() {
 
-    platformUtil.net.asyncAjaxData("/question/insert", {},
-        function (result) {
-            if (result.data === "success") {
-                grid.reload();
-            }
-        })
+    var newRow = { name: "New Row" };
+    grid.addRow(newRow, 0);
+
+    grid.beginEditCell(newRow, "type")
 }
 
 function search() {
